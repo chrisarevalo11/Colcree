@@ -39,6 +39,7 @@ body {
     position: fixed;
     z-index: 100;
     background-color: #fff;
+    top: 0;
 }
 
 .navbar .container img {
@@ -79,7 +80,7 @@ body {
 }
 
 .qs-container {
-    background-image: url("./img/quienes-somos-bg.jpg");
+    background-image: url("./img/qs-bg2.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -154,26 +155,34 @@ body {
 
 .mision .mision-text {
     text-align: center;
-    padding-left: 20px;
+    padding-left: 40px;
 }
 
 .mision .mision-text h2 {
     padding-bottom: 15px;
 }
 
+.mision .mision-text p {
+    text-align: justify;
+}
+
 /* Visión */
 .vision {
-    background-color: var(--main-blue-color);
+    background-color: #fff;
     padding: 100px 70px;
 }
 
 .vision .vision-text {
     text-align: center;
-    padding-right: 20px;
+    padding-right: 40px;
 }
 
 .vision .vision-text h2 {
     padding-bottom: 15px;
+}
+
+.vision .vision-text p {
+    text-align: justify;
 }
 
 /* Contacto */
