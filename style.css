@@ -2,7 +2,7 @@
 
 :root{
     --main-blue-color: #3174e9;
-    --main-yellow-color: #e7bf0e;
+    --main-yellow-color: #f5cd1a;
 }
 
 * {
@@ -40,6 +40,7 @@ body {
     z-index: 100;
     background-color: #fff;
     top: 0;
+    box-shadow: 0 5px 10px 0px #05010133;
 }
 
 .navbar .container img {
@@ -56,14 +57,60 @@ body {
 }
 
 .navbar nav a {
-    margin-right: 15px;
     padding: 10px;
     font-weight: bold;
     color: var(--main-blue-color);
 }
 
+.navbar nav li {
+    margin-right: 15px;
+}
+
 .navbar nav a:hover {
     border-bottom: 3px solid var(--main-blue-color);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ddd;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 110;
+}
+
+.dropdown-content a {
+    display: block;
+    width: 100%;
+    padding: 12px;
+}
+
+.dropdown-content a:hover {
+    background-color: #ccc;
+}
+
+.nosotros:hover .dropdown-content {
+    display: block;
+    margin-top: 13px;
+}
+
+.navbar nav ul li:last-child {
+    animation-name: scale;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.navbar nav ul li:last-child > a {
+    background-color: var(--main-blue-color);
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.navbar nav ul li:last-child > a:hover {
+    background-color: #1f50a4;
+    box-shadow: 0 0 9px 4px #201c9733;
+    border-bottom: none;
 }
 
 /* Quiénes somos */
@@ -125,7 +172,7 @@ body {
 }
 
 .qs-text {
-    margin: 80px auto;
+    margin-top: 80px !important;
     max-width: 1000px;
 }
 
@@ -139,12 +186,13 @@ body {
 .mision {
     margin-top: 40px;
     background-color: var(--main-yellow-color);
-    padding: 100px 70px;
+    padding: 40px 70px;
 }
 
 .img-cont,
 .mision-text,
-.vision-text {
+.vision-text,
+.valores-text {
     flex: 1 1 0;
 }
 
@@ -155,7 +203,8 @@ body {
 
 .mision .mision-text {
     text-align: center;
-    padding-left: 40px;
+    margin-left: 40px;
+    background-color: #e2383842;
 }
 
 .mision .mision-text h2 {
@@ -169,12 +218,13 @@ body {
 /* Visión */
 .vision {
     background-color: #fff;
-    padding: 100px 70px;
+    padding: 50px 70px;
 }
 
 .vision .vision-text {
     text-align: center;
-    padding-right: 40px;
+    margin-right: 40px;
+    background-color: #3174e969;
 }
 
 .vision .vision-text h2 {
@@ -185,10 +235,36 @@ body {
     text-align: justify;
 }
 
+/* Valores */
+.valores {
+    margin-top: 40px;
+    background-color: var(--main-yellow-color);
+    padding: 50px 70px;
+}
+
+.img-cont {
+    min-width: 300px;
+}
+
+.valores .valores-text {
+    text-align: center;
+    margin-left: 40px;
+    background-color: #e2383842;
+}
+
+.valores .valores-text h2 {
+    padding-bottom: 15px;
+}
+
+.valores .valores-text p {
+    text-align: justify;
+}
+
 /* Contacto */
 footer {
-    background-color: var(--main-yellow-color);
-    padding: 30px 70px;
+    background-color: #fff;
+    padding: 10px 70px;
+    box-shadow: 0 -5px 10px 0px #05010133;
 }
 
 footer h1 {
@@ -197,6 +273,7 @@ footer h1 {
 
 footer .flex {
     justify-content: space-between;
+    padding-bottom: 20px;
 }
 
 .footer-left {
@@ -205,7 +282,7 @@ footer .flex {
 }
 
 .footer-left h3 {
-    padding: 20px 0;
+    padding-top: 10px;
 }
 
 .footer-left .img img {
@@ -227,6 +304,7 @@ footer .footer-right {
     transition: color .3s;
     text-align: center;
     width: fit-content;
+    max-width: 100px;
 }
 
 .footer-right i {
@@ -234,11 +312,99 @@ footer .footer-right {
     margin-right: 10px;
 }
 
+#phone {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#phone:hover {
+    cursor: pointer;
+}
+
 .footer-right a:hover {
+    color: var(--main-blue-color);
+}
+
+footer p {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Concurso-titulo */
+.concurso-title-container {
+    margin-top: 60px;
+    height: 85vh;
+    background-image: url("./img/qs-bg2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+}
+
+.concurso-title-container h1 {
+    color: #fff;
+    text-align: center;
+    max-width: 1100px;
+    background-color: rgba(0, 0, 0, 0.504);
+    padding: 5px;
+}
+
+.concurso-title-container a {
+    margin-top: 40px;
+    background-color: var(--main-yellow-color);
+    padding: 20px 60px;
+    font-size: 2em;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.concurso-title-container a:hover {
+    background-color: #d9b514;
+}
+
+/* Concurso-historia */
+.concurso-historia {
+    margin-top: 30px;
+}
+
+.concurso-historia .historia-cont h2 {
+    color: var(--main-blue-color);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.concurso-historia .historia-cont p {
+    text-align: justify;
+}
+
+.concurso-historia .historia-cont iframe {
+    margin: 40px auto 20px;
+    display: block;
+}
+
+/* Concurso-inscripcion */
+.concurso-inscripcion .inscripcion-cont {
+    background-color: var(--main-blue-color);
     color: #fff;
 }
 
+.concurso-inscripcion .inscripcion-cont h2 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.concurso-inscripcion .inscripcion-cont p {
+    text-align: justify;
+    padding: 20px 0;
+}
+
 /* Utilities */
+.short-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -253,4 +419,28 @@ footer .footer-right {
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+.relative {
+    position: relative;
+}
+
+.card {
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 15px -3px #05010133;
+    margin: 40px auto;
+}
+
+/* Animations */
+@keyframes scale {
+    10% {
+        transform: scale(1.1);
+    } 20% {
+        transform: scale(1);
+    } 30% {
+        transform: scale(1.1);
+    } 40%, 100% {
+        transform: scale(1);
+    }
 }
