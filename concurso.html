@@ -18,8 +18,10 @@
                 <ul class="flex relative">
                     <li>
                         <div class="nosotros">
-                            <a href="index.html" class="dropbtn">Nosotros</a>
-                            <div class="dropdown-content">
+                            <a href="index.html" class="dropbtn">
+                                Nosotros <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                            <div class="dropdown-content-nosotros">
                               <a href="index.html#mision">Misión</a>
                               <a href="index.html#vision">Visión</a>
                               <a href="index.html#valores">Valores</a>
@@ -27,7 +29,17 @@
                             </div>
                         </div>
                     </li>
-                    <li><a href="concurso.html">Concurso</a></li>
+                    <li>
+                        <div class="concurso">
+                            <a href="concurso.html">
+                                Concurso <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                            <div class="dropdown-content-concurso">
+                                <a href="concurso.html#historia">Historia</a>
+                                <a href="concurso.html#inscripcion">Prerrequisitos</a>
+                            </div>
+                        </div>
+                    </li>
                     <li><a href="#">Galería</a></li>
                     <li><a href="#">Noticias</a></li>
                     <li><a class="donar" href="#">Donar</a></li>
@@ -37,22 +49,19 @@
     </div>
 
     <div class="concurso-title-container flex">
-        <h1>Concurso de artes plásticas: "Así se construye memoria".</h1>
+        <h1>Concurso de artes plásticas: "Así se construye memoria"</h1>
         <a href="#inscripcion" class="inscripcion">Inscríbete!</a>
     </div>
 
-    <section class="concurso-historia">
+    <section id="historia" class="concurso-historia">
         <div class="historia-cont short-container card">
             <h2>Historia</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Voluptatem officia eveniet quisquam sint et fugiat earum 
-                molestias, quia, soluta tempora maiores sit velit accusantium. 
-                Consectetur aspernatur quis aut, dolore iure cum tempore 
-                aliquam consequuntur eligendi quaerat cupiditate eum. Amet 
-                necessitatibus assumenda cum harum deserunt sunt illum voluptate, 
-                officiis neque nostrum dignissimos magni deleniti optio doloremque, 
-                aliquam dolorum praesentium, sapiente blanditiis!
+                Este año, se realizará el cuarto concurso de artes plásticas referente al conflicto armado,  ASÍ SE CONSTRUYE MEMORIA,  dirigido a población con discapacidad visual de todo el país, sin excepción de edad, en asociación con el Comando General de Las Fuerzas Militares CCOET y el Instituto Nacional para Ciegos INCI.
+
+                La inscripción gratuita se llevará a cabo a través de la linea telefónica de Colcree 3186083766, recuerda leer las especificaciones del concurso.
+                
+                En la premiación se otorgarán múltiples reconocimientos y premios remunerados. El primer puesto obtendrá $3'000.000.
             </p>
             <iframe width="70%" height="350px" src="https://www.youtube.com/embed/vLCdycTRoQI?autoplay=1&loop=1" frameborder="0"></iframe>
         </div>
@@ -62,25 +71,32 @@
         <div class="inscripcion-cont short-container card">
             <h2>Prerrequisitos de inscripción</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam 
-                illum modi cupiditate doloribus distinctio corporis, minus 
-                commodi voluptas dolorum quo aut, assumenda dicta vitae
-                <a class="ver-pre" href="">Ver <i class="fa-solid fa-angle-down"></i></a>
-                <a class="down-pre" href="">Descargar</a>
+                El concurso cuenta con algunos prerrequisitos para poder participar. A continuación, tiene la opción para ver o descargar las especificaciones:
             </p>
-            <form action="">
-                <label for="">
-                    <input type="checkbox">
-                    Acepto los Terminos y condiciones y estoy de acuerdo con 
-                    los prerrequisitos para participar en el concurso.
+            <div class="btns-cont flex">
+                <button onclick="textAppear()">
+                    Ver <i class="fa-solid fa-angle-down"></i>
+                </button>
+                <a href="">
+                    Descargar
+                </a>
+            </div>
+            <div id="texto-insc" class="texto-oculto flex visible">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nesciunt ducimus, dicta sed hic enim tempore porro laudantium fuga reprehenderit dignissimos ut molestiae magni quidem sequi ab veritatis odit similique amet maxime! Laudantium laborum, ullam illum reiciendis in ducimus itaque repudiandae labore et dolore error non eveniet molestiae odit numquam!</p>
+            </div>
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLSdfrI4rCenP4GdIfTeuRgH1xNwfaXjrdzRePDRXvO6W_5Fj0g/viewform?usp=sf_link" target="_blank">
+                <input type="checkbox" name="terms" id="terms" required>
+                <label for="terms">
+                    Acepto y estoy de acuerdo con los Términos y Condiciones para participar en el concurso.
                 </label>
+                <input type="submit" value="Inscribirme">
             </form>
         </div>
     </section>
 
     <footer id="contacto">
         <h1>Contáctanos</h1>
-        <div class="container flex">
+        <div class="flex">
             <div class="footer-left">
                 <div class="img">
                     <img src="./img/logo colcree .png" alt="">
@@ -88,7 +104,7 @@
                 <h3>Bogotá, Carrera 72 A No 55 - 28</h3>
             </div>
             <div class="footer-right">
-                <ul class="grid">
+                <ul class="grid gap">
                     <li>
                         <a href="https://instagram.com/funcolcree?igshid=YmMyMTA2M2Y=" target="_blank">
                             <i class="fa-brands fa-instagram"></i>
@@ -104,7 +120,8 @@
                     <li>
                         <a href="https://instagram.com/funcolcree?igshid=YmMyMTA2M2Y=" target="_blank">
                             <i class="fa-solid fa-envelope"></i>
-                            concursoartesplas<br>ticas@gmail.com
+                            fundacioncolcree@gmail.com
+
                         </a>
                     </li>
                     <li>

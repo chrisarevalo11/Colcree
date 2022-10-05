@@ -70,7 +70,8 @@ body {
     border-bottom: 3px solid var(--main-blue-color);
 }
 
-.dropdown-content {
+.dropdown-content-nosotros,
+.dropdown-content-concurso {
     display: none;
     position: absolute;
     background-color: #ddd;
@@ -79,19 +80,32 @@ body {
     z-index: 110;
 }
 
-.dropdown-content a {
+.dropdown-content-nosotros a,
+.dropdown-content-concurso a {
     display: block;
     width: 100%;
     padding: 12px;
 }
 
-.dropdown-content a:hover {
+.dropdown-content-nosotros a:hover,
+.dropdown-content-concurso a:hover {
     background-color: #ccc;
 }
 
-.nosotros:hover .dropdown-content {
+.nosotros:hover .dropdown-content-nosotros,
+.concurso:hover .dropdown-content-concurso {
     display: block;
     margin-top: 13px;
+}
+
+.nosotros:hover i,
+.concurso:hover i {
+    transform: rotate(180deg);
+}
+
+.nosotros i,
+.concurso i {
+    font-size: 16px;
 }
 
 .navbar nav ul li:last-child {
@@ -177,7 +191,7 @@ body {
 }
 
 .qs-text p {
-    text-align: center;
+    text-align: justify;
     font-size: 1.3em;
     padding: 0 20px;
 }
@@ -399,6 +413,54 @@ footer p {
     padding: 20px 0;
 }
 
+.concurso-inscripcion .inscripcion-cont .btns-cont a {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--main-yellow-color);
+    transition: background .3s;
+}
+
+.concurso-inscripcion .inscripcion-cont .btns-cont button {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.2em;
+    background-color: transparent;
+    border: 2px solid var(--main-yellow-color);
+    transition: background .3s;
+}
+
+.concurso-inscripcion .inscripcion-cont .btns-cont button:hover,
+.concurso-inscripcion .inscripcion-cont .btns-cont a:hover  {
+    background-color: var(--main-yellow-color);
+    cursor: pointer;
+}
+
+.concurso-inscripcion .inscripcion-cont .visible {
+    display: none;
+}
+
+.concurso-inscripcion form input[type="submit"] {
+    display: block;
+    margin: 30px auto 10px;
+    padding: 15px 25px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 20px 1px #05010151;
+    background-color: var(--main-yellow-color);
+    color: #fff;
+    font-weight: bold;
+}
+
+.concurso-inscripcion form input[type="submit"]:hover {
+    background-color: #e1bd1c;
+    cursor: pointer;
+    box-shadow: 0 0 5px 3px #05010151;
+}
+
 /* Utilities */
 .short-container {
     max-width: 800px;
@@ -430,6 +492,10 @@ footer p {
     padding: 20px;
     box-shadow: 0 10px 15px -3px #05010133;
     margin: 40px auto;
+}
+
+.gap {
+    column-gap: 100px;
 }
 
 /* Animations */
